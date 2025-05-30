@@ -1,9 +1,11 @@
 def f(n):
-    reversed_str = str(n)[::-1]
-    reversed_num = int(reversed_str)
-    return reversed_num
+    rev_str = str(n)[::-1]
+    rev_num = int(rev_str)
+    return rev_num
+
 def g(n):
     return f(f(n)) / n
+
 def uniq_g_values():
     uniq_values = set() 
     for n in range(2, 1030):
@@ -13,5 +15,5 @@ def uniq_g_values():
         uniq_values.add(g_n)   
     return len(uniq_values)
 
-result = uniq_g_values()
-print(result)  
+res = uniq_g_values()
+print(res)  
